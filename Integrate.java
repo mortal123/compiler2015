@@ -3,9 +3,9 @@
 import org.antlr.v4.runtime.*; 
 import org.antlr.v4.runtime.tree.*;
 
-import GrammarLexer;
-import GrammarParser;
-import ProgramContext;
+import Grammar.GrammarLexer;
+import Grammar.GrammarParser;
+import Grammar.GrammarParser.ProgramContext;
 
 public class Integrate {
 	public static void main(String[] args) throws Exception {

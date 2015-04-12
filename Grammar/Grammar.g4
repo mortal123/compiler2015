@@ -1,5 +1,9 @@
  grammar Grammar;
 
+ @header{
+    package Grammar;
+ }
+
  program: (declaration | function_definition)+ ;
 
 
