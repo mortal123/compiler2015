@@ -98,6 +98,16 @@ public interface GrammarListener extends ParseTreeListener {
 	 */
 	void exitType_specifier(GrammarParser.Type_specifierContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link GrammarParser#struct_or_union}.
+	 * @param ctx the parse tree
+	 */
+	void enterStruct_or_union(GrammarParser.Struct_or_unionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#struct_or_union}.
+	 * @param ctx the parse tree
+	 */
+	void exitStruct_or_union(GrammarParser.Struct_or_unionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link GrammarParser#plain_declaration}.
 	 * @param ctx the parse tree
 	 */
@@ -368,6 +378,16 @@ public interface GrammarListener extends ParseTreeListener {
 	 */
 	void exitMultiplicative_expression(GrammarParser.Multiplicative_expressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link GrammarParser#multiplicative_operator}.
+	 * @param ctx the parse tree
+	 */
+	void enterMultiplicative_operator(GrammarParser.Multiplicative_operatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#multiplicative_operator}.
+	 * @param ctx the parse tree
+	 */
+	void exitMultiplicative_operator(GrammarParser.Multiplicative_operatorContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link GrammarParser#cast_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -397,6 +417,16 @@ public interface GrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitUnary_expression(GrammarParser.Unary_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GrammarParser#unary_operator}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnary_operator(GrammarParser.Unary_operatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrammarParser#unary_operator}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnary_operator(GrammarParser.Unary_operatorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GrammarParser#postfix_expression}.
 	 * @param ctx the parse tree

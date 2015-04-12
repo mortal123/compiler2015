@@ -19,10 +19,10 @@
             | '{' initializer (',' initializer)* '}' ;
  
  type_specifier: 'void' | 'char' | 'int'
-               | Struct_or_union Identifier? '{' (type_specifier declarators ';')+ '}'
-               | Struct_or_union Identifier ;
+               | struct_or_union Identifier? '{' (type_specifier declarators ';')+ '}'
+               | struct_or_union Identifier ;
  
- Struct_or_union: 'struct' | 'union' ;
+ struct_or_union: 'struct' | 'union' ;
  
  plain_declaration: type_specifier declarator ;
  
@@ -88,9 +88,9 @@
  
  additive_operator: '+' | '-' ;
  
- multiplicative_expression: cast_expression (Multiplicative_operator cast_expression)* ;
+ multiplicative_expression: cast_expression (multiplicative_operator cast_expression)* ;
  
- Multiplicative_operator: '*' | '/' | '%' ;
+ multiplicative_operator: '*' | '/' | '%' ;
  
  cast_expression: unary_expression
                 | '(' type_name ')' cast_expression ;
@@ -100,11 +100,11 @@
  unary_expression: postfix_expression
                  | '++' unary_expression
                  | '--' unary_expression
-                 | Unary_operator cast_expression
+                 | unary_operator cast_expression
                  | 'sizeof' unary_expression
                  | 'sizeof' '(' type_name ')' ;
  
- Unary_operator: '&' | '*' | '+' | '-' | '~' | '!' ;
+ unary_operator: '&' | '*' | '+' | '-' | '~' | '!' ;
  
  postfix_expression: primary_expression postfix* ;
  
