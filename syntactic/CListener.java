@@ -1,6 +1,8 @@
 // Generated from C.g4 by ANTLR 4.5
 
     package Compiler2015.syntactic;
+    import Compiler2015.ast.*;
+    import java.util.*;
  
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
@@ -470,4 +472,24 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPrimary_expression(CParser.Primary_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#integer_constant}.
+	 * @param ctx the parse tree
+	 */
+	void enterInteger_constant(CParser.Integer_constantContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#integer_constant}.
+	 * @param ctx the parse tree
+	 */
+	void exitInteger_constant(CParser.Integer_constantContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#character_constant}.
+	 * @param ctx the parse tree
+	 */
+	void enterCharacter_constant(CParser.Character_constantContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#character_constant}.
+	 * @param ctx the parse tree
+	 */
+	void exitCharacter_constant(CParser.Character_constantContext ctx);
 }

@@ -1,20 +1,35 @@
-//package Compiler2015.syntatic;
+package Compiler2015.main;
 
+import java.io.*;
+import java.util.*;
 import org.antlr.v4.runtime.*; 
 import org.antlr.v4.runtime.tree.*;
 
 import Compiler2015.syntactic.CLexer;
 import Compiler2015.syntactic.CParser;
-//import Compiler2015.syntactic.CParser.ProgramContext;
+import Compiler2015.ast.*;
+import Compiler2015.syntactic.CParser.ProgramContext;
 
 public class Integrate {
-	public static void main(String[] args) throws Exception {
-              // create a CharStream that reads from standard input
-		ANTLRInputStream input = new ANTLRInputStream(System.in); // create a lexer that feeds off of input CharStream
-		CLexer lexer = new CLexer(input); // create a buffer of tokens pulled from the lexer
-		CommonTokenStream tokens = new CommonTokenStream(lexer); // create a parser that feeds off the tokens buffer
-		CParser parser = new CParser(tokens);
-		ParseTree tree = parser.program(); // begin parsing at init rule
-		System.out.println(tree.toStringTree(parser)); // print LISP-style tree }
+    static String inputFile = "/Users/liwenhao/Project/Compiler2015/main/sample.c";
+    static String outputFile = "result.txt";
+    static AST ast = null;
+
+    public static void main(String[] args) throws Exception {
+      //  PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
+      //  System.setOut(ps);
+        travel();
+    }
+
+	private static void travel() throws Exception {
+//        ANTLRInputStream input = new ANTLRInputStream(System.in);
+		ANTLRFileStream input = new ANTLRFileStream(inputFile); 
+		CLexer lexer = new CLexer(input); 
+		CommonTokenStream tokens = new CommonTokenStream(lexer); 
+        tokens.fill();
+		CParser parser = new CParser(tokens); 
+		ProgramContext context = parser.program(); 
+        ast = context.ret;
+        ast.draw(0);
 	}
 }

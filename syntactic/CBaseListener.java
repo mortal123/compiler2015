@@ -1,6 +1,8 @@
 // Generated from C.g4 by ANTLR 4.5
 
     package Compiler2015.syntactic;
+    import Compiler2015.ast.*;
+    import java.util.*;
  
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -566,6 +568,30 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPrimary_expression(CParser.Primary_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInteger_constant(CParser.Integer_constantContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInteger_constant(CParser.Integer_constantContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCharacter_constant(CParser.Character_constantContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCharacter_constant(CParser.Character_constantContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
