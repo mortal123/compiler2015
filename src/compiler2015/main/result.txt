@@ -1,0 +1,30 @@
+[AST]:
+\---(decls):
+        [FunctionDecl name = main]:
+        \---(returnType):
+                [Int]
+        \---(params):
+        \---(body):
+                [CompoundStmt]:
+                \---(decls):
+                        [VarDecl name = a]:
+                        \---(type):
+                                [Int]
+                        \---(init):
+                        [VarDecl name = b]:
+                        \---(type):
+                                [Int]
+                        \---(init):
+                \---(stats):
+                        [Expr op = ASSIGN]:
+                        \---(left):
+                                [Symbol = a]
+                        \---(right):
+                                [Expr op = ASSIGN]:
+                                \---(left):
+                                        [Symbol = b]
+                                \---(right):
+                                        [Symbol = b]
+                        [ReturnStmt]:
+                        \---(expr):
+                                [IntConst value = 0]

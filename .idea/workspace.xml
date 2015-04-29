@@ -1,78 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e937ec3-4c1e-4324-8308-14ad7a7fb009" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Syntactic/C.g4" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/Grammar.g4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/Grammar.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarBaseListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarBaseListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarLexer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarLexer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarLexer.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Additive_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Additive_operatorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$And_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$ArgumentsContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Assignment_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Assignment_operatorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Cast_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Compound_statementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Constant_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$DeclarationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$DeclaratorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$DeclaratorsContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Equality_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Equality_operatorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Exclusive_or_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$ExpressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Expression_statementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Function_definitionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Inclusive_or_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Init_declaratorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Init_declaratorsContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$InitializerContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Iteration_statementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Jump_statementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Logical_and_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Logical_or_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Multiplicative_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Multiplicative_operatorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$ParametersContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Plain_declarationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Plain_declaratorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$PostfixContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Postfix_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Primary_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$ProgramContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Relational_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Relational_operatorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Selection_statementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Shift_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Shift_operatorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$StatementContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Struct_or_unionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Type_nameContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Type_specifierContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Unary_expressionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser$Unary_operatorContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/GrammarParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/Integrate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/Integrate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/ansiC.g4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/input" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/input.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/translator" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Grammar/translator.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Integrate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Integrate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compiler2015" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/order" afterPath="" />
-    </list>
+    <list default="true" id="5e937ec3-4c1e-4324-8308-14ad7a7fb009" name="Default" comment="" />
     <ignored path="Compiler2015.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -92,18 +21,7 @@
     <favorites_list name="Compiler2015" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Compiler2015.iml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Compiler2015.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30800822">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,10 +42,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="22" />
-    <option name="y" value="43" />
-    <option name="width" value="1400" />
-    <option name="height" value="837" />
+    <option name="x" value="146" />
+    <option name="y" value="107" />
+    <option name="width" value="1436" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -152,6 +70,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -159,44 +78,11 @@
               <option name="myItemId" value="Compiler2015" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Syntactic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,19 +257,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="22" y="43" width="1400" height="837" extended-state="0" />
+    <frame x="146" y="107" width="1436" height="877" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294271" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31311882" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24373259" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -412,24 +298,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../antlr-4.5-complete.jar!/org/antlr/v4/runtime/tree/ParseTree.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032467533">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler2015.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30800822">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
