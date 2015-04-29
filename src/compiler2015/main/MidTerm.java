@@ -45,7 +45,7 @@ public class MidTerm {
 		CLexer lexer = new CLexer(filestream);
 		CommonTokenStream stream = new CommonTokenStream(lexer);
 		CParser parser = new CParser(stream);
-		stream.fill();
+//		stream.fill();
 		
 		lexer.removeErrorListeners();
 		parser.removeErrorListeners();
@@ -98,7 +98,7 @@ public class MidTerm {
 	}
 	
 	private static void exit(int i) {
-		System.err.println("exit with " + i);
+//		System.err.println("exit with " + i);
 		if (!DEBUG) {
 			System.exit(i);
 		}
@@ -106,8 +106,8 @@ public class MidTerm {
 
 	
 	public static void main(String[] args) throws Exception {
-		PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
-		System.setOut(ps);
+//		PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
+//		System.setOut(ps);
 		
 		if (DEBUG) {
 			FilenameFilter filter = new FilenameFilter() {

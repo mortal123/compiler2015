@@ -13,8 +13,8 @@ import compiler2015.ast.*;
 import compiler2015.syntactic.CParser.ProgramContext;
 import compiler2015.semantic.*;
 
-public class MidTermX {
-	final static boolean DEBUG = true;
+public class MidTerm {
+	final static boolean DEBUG = false;
 	final static String TESTCASE_FOLDER = "/Users/liwenhao/Project/compiler2015/testcases/Phase2/Passed-new";
 	static boolean ok;
 	
@@ -26,9 +26,11 @@ public class MidTermX {
 		public void syntaxError(Recognizer<?, ?> recognizer,
 				Object offendingSymbol, int line, int charPositionInLine,
 				String msg, RecognitionException e) {
-			System.err.println("Parse Error " + line + " " + charPositionInLine
-					+ " " + msg);
-			e.printStackTrace();
+			if (DEBUG) {
+				System.err.println("Parse Error " + line + " " + charPositionInLine + " " + msg);
+				e.printStackTrace();
+			}
+			
 			ok = false;
 			if (DEBUG) {
 				System.err.println("exit with 1"); 
@@ -37,13 +39,43 @@ public class MidTermX {
 			}
 		}
 	}
-	
-	public static void test(File testcase) throws Exception {
-		ANTLRFileStream filestream = new ANTLRFileStream(testcase.getAbsolutePath());
+
+	public static void std_test() throws Exception {
+		ANTLRInputStream filestream = new ANTLRInputStream(System.in);
 		CLexer lexer = new CLexer(filestream);
 		CommonTokenStream stream = new CommonTokenStream(lexer);
 		CParser parser = new CParser(stream);
 		stream.fill();
+		
+		lexer.removeErrorListeners();
+		parser.removeErrorListeners();
+		ok = true;
+		
+		lexer.addErrorListener(new MidTermListener());
+		parser.addErrorListener(new MidTermListener());
+		
+		ProgramContext context = parser.program();
+		if (!ok) return;
+		
+		AST ast = context.ret;
+
+		//ast.draw(0);
+		//System.out.println();
+		
+		Semantic semantic = new Semantic(ast);
+		if (semantic.hasError()) {
+			exit(1);
+		} else {
+			exit(0);
+		}
+	}
+	
+	public static void debug_test(File testcase) throws Exception {
+		ANTLRFileStream filestream = new ANTLRFileStream(testcase.getAbsolutePath());
+		CLexer lexer = new CLexer(filestream);
+		CommonTokenStream stream = new CommonTokenStream(lexer);
+		CParser parser = new CParser(stream);
+//		stream.fill();
 
 		parser.removeErrorListeners();
 		ok = true;
@@ -66,7 +98,7 @@ public class MidTermX {
 	}
 	
 	private static void exit(int i) {
-		System.err.println("exit with " + i);
+//		System.err.println("exit with " + i);
 		if (!DEBUG) {
 			System.exit(i);
 		}
@@ -74,8 +106,8 @@ public class MidTermX {
 
 	
 	public static void main(String[] args) throws Exception {
-		PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
-		System.setOut(ps);
+//		PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
+//		System.setOut(ps);
 		
 		if (DEBUG) {
 			FilenameFilter filter = new FilenameFilter() {
@@ -91,10 +123,10 @@ public class MidTermX {
 			for (File testcase : testcases) {
 				System.out.println(testcase.getName() + " : ");
 				System.err.println(testcase.getName() + "   ");
-				test(testcase);
+				debug_test(testcase);
 			}
 		} else {
-			test(new File(args[0]));
+			std_test();
 		}
 	}
 }
