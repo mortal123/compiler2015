@@ -23,8 +23,8 @@ public class Board {
 	}
 	
 	public void print() throws Exception {
-	    PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
-        System.setOut(ps);
+	    //PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
+        //System.setOut(ps);
     
 		System.out.println("");
 		System.out.println("");
