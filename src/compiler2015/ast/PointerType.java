@@ -4,7 +4,7 @@ import compiler2015.syntactic.CParser;
 
 public class PointerType extends Type {
     public Type baseType;
-
+    
     public PointerType() {
         baseType = null;
     }

@@ -1,0 +1,112 @@
+printf:
+la $gp, global_buffer
+sw $a0, ($gp)
+sw $t0, 4($gp)
+sw $t1, 8($gp)
+sw $t2, 12($gp)
+sw $t3, 16($gp)
+sw $a2, 20($gp)
+
+__printf:
+add $t2, $sp, -8
+lw $t1, -4($sp)
+add $t1, $t1, -1
+__printf_loop:
+add $t1, $t1, 1
+lb $a2, ($t1)
+beq $a2, 0, __printf_end
+beq $a2, 37, __printf_format      # %     # %04d, %d, %c, %s, %04d <-> only positve integer   %: 37   \: 92  \n: 10  \t: 9 
+beq $a2, 92, __printf_trans       # \     # \n, \t
+__printf_normal:
+li $v0, 11
+lb $a0, ($t1)
+syscall
+j __printf_loop
+__printf_format:
+lb $t0, 1($t1)
+beq $t0, 'd', __printf_format_d
+beq $t0, 'c', __printf_format_c
+beq $t0, 's', __printf_format_s
+beq $t0, '.', __printf_format_fuck       # %.9d
+beq $t0, 37, __printf_format_percent     # %
+j __printf_normal
+__printf_format_d:
+li $v0, 1
+lw $a0, ($t2)
+syscall
+j __printf_format_cont
+
+__printf_format_c:
+li $v0, 11
+lb $a0, ($t2)
+syscall
+j __printf_format_cont
+__printf_format_s:
+li $v0, 4
+lw $a0, ($t2)
+syscall
+j __printf_format_cont
+__printf_format_fuck:
+add $t1, $t1, 2
+lw $a2, ($t2)
+
+lb $t3, ($t1)
+add $t3, -48   # $t3 .x
+
+li $t4, 0                      # length of $a2
+
+__calc_length:
+beq $a2, 0, __printf_format_fuck_leading
+add $t4, $t4, 1
+div $a2, $a2, 10
+j __calc_length
+
+__printf_format_fuck_leading:
+bge $t4, $t3, __printf_format_fuck_body 
+li $v0, 11
+li $a0, '0'
+syscall
+add $t3, $t3, -1
+j __printf_format_fuck_leading
+
+__printf_format_fuck_body:
+li $v0, 1
+lw $a0, ($t2)
+syscall
+
+__printf_format_cont:
+add $t2, $t2, -4
+add $t1, $t1, 1
+j __printf_loop
+
+__printf_trans:
+li $v0, 11
+add $t1, $t1, 1
+lb $a0, ($t1)
+beq $a0, 'n', __next_line
+li $a0, 9                            # \t
+j __ending
+__next_line:
+li $a0, 10							 # \n
+__ending:
+syscall
+j __printf_loop
+
+__printf_format_percent:
+li $v0, 11
+add $t1, $t1, 1
+li $a0, 37						     # %
+syscall
+j __printf_loop
+
+__printf_end:
+
+
+lw $a0, ($gp)
+lw $t0, 4($gp)
+lw $t1, 8($gp)
+lw $t2, 12($gp)
+lw $t3, 16($gp)
+lw $a2, 20($gp)
+
+jr $ra

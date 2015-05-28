@@ -5,17 +5,20 @@ import compiler2015.syntactic.CParser;
 public class ArrayType extends Type {
     public Type baseType;
     public Expr arraySize;
-    public int sizeOf, size;
+    public int size, sizeOf;
 
     public ArrayType() {
         baseType = null;
         arraySize = null;
-        sizeOf = size = -1;
+        size = -1;
+        sizeOf = -1;
     }
 
     public ArrayType(Type baseType, Expr arraySize) {
         this.baseType = baseType;
         this.arraySize = arraySize;
+        size = -1;
+        sizeOf = -1;
     }
 
     public void draw(int blank) {

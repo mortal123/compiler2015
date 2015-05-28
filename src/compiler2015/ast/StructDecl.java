@@ -20,6 +20,14 @@ public class StructDecl extends Decl {
         this.fields = fields;
     }
 
+    public int getSize() {
+        return sizeOf;
+    }
+    
+    public void loadSize() {
+    	sizeOf += sizeOf % 4;
+    }
+
     public void draw(int blank) {
         for(int i = 1; i <= blank; i++) {
             System.out.print(" ");

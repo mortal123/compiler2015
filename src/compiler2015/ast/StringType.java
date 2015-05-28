@@ -4,6 +4,7 @@ import compiler2015.syntactic.CParser;
 
 public class StringType extends Type {
 	// baseType = CharType;
+	
 	int length;
 	
 	public StringType(int _length) {

@@ -4,7 +4,7 @@ import compiler2015.syntactic.CParser;
 
 public class UnionType extends BasicType {
     public Symbol tag;
-
+    
     public UnionType() {
         tag = null;
     }

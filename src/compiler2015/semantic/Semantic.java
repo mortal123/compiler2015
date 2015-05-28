@@ -6,16 +6,6 @@ import compiler2015.ast.*;
 import compiler2015.env.*;
 import compiler2015.table.*;
 
-class Pair<A, B> {
-	public A first;
-	public B second;
-	
-	Pair(A a, B b) {
-		first = a;
-		second = b;
-	}
-};
-
 class ExprInfo {
 	public Type type;
 	public Boolean isLeft;
@@ -522,7 +512,7 @@ public class Semantic {
 		} else if (expr instanceof IntConst) {
 			return new ExprInfo((Type)(new IntType()), false, ((IntConst)expr).value);
 		} else if (expr instanceof CharConst) {
-			return new ExprInfo((Type)(new CharType()), false, Integer.valueOf(((CharConst)expr).value.charAt(0)));
+			return new ExprInfo((Type)(new CharType()), false, Integer.valueOf(((CharConst)expr).value));
 		} else if (expr instanceof StringConst) {
 			return new ExprInfo((Type)(new StringType(((StringConst)expr).value.length())), false, null);
 		} else {

@@ -423,7 +423,7 @@ Whitespace : [ \r\t\n]+ -> channel(HIDDEN);
 fragment EOL : '\r' | '\n' | ('\r''\n') ;
 
 Multi_comment : '/*' .*? '*/' -> channel(HIDDEN);
-Single_comment : '//' ~[\r\n]* (EOL) -> channel(HIDDEN);
+Single_comment : '//' ~[\r\n]* -> channel(HIDDEN);
 Preprocessing : '#' ~[\r\n]* (EOL) -> channel(HIDDEN);
 
 Hex : '0' ('x'|'X') HexDigit+ ;
@@ -435,7 +435,7 @@ fragment HexDigit : (Digit | [a-f] | [A-F]) ;
 fragment OctDigit : [0-7] ;
 fragment Letter: '$' | [A-Z] | '_' |  [a-z];
 
-CHARACTERLITERAL : '\'' ( ('\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')) 
+CHARACTERLITERAL : '\'' ( ('\\' ('b'|'t'|'n'|'f'|'r'|'0'|'\"'|'\''|'\\')) 
     | ~('\''|'\\') ) '\'' 
     | '\'\\' OctDigit OctDigit OctDigit '\''
     | '\'\\' ('0x'|'0X') HexDigit HexDigit'\'';
