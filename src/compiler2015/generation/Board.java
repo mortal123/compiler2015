@@ -23,8 +23,8 @@ public class Board {
 	}
 	
 	public void print() throws Exception {
-	    //PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
-        //System.setOut(ps);
+	    PrintStream ps = new PrintStream(new FileOutputStream(outputFile));
+        System.setOut(ps);
     
 		System.out.println("");
 		System.out.println("");
@@ -78,6 +78,7 @@ public class Board {
 		System.out.println("beq $t0, 'c', __printf_format_c");
 		System.out.println("beq $t0, 's', __printf_format_s");
 		System.out.println("beq $t0, '.', __printf_format_fuck       # %.9d");
+		System.out.println("beq $t0, '0', __printf_format_fuck       # %.9d");
 		System.out.println("beq $t0, 37, __printf_format_percent     # %");
 		System.out.println("j __printf_normal");
 		System.out.println("__printf_format_d:");
